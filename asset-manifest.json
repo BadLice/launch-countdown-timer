@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/launch-countdown-timer/static/js/main.389a5c9d.js",
+    "static/js/787.aa4e740e.chunk.js": "/launch-countdown-timer/static/js/787.aa4e740e.chunk.js",
+    "index.html": "/launch-countdown-timer/index.html",
+    "main.389a5c9d.js.map": "/launch-countdown-timer/static/js/main.389a5c9d.js.map",
+    "787.aa4e740e.chunk.js.map": "/launch-countdown-timer/static/js/787.aa4e740e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.389a5c9d.js"
+  ]
+}
