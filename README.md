@@ -1,4 +1,4 @@
-#Live demo: https://BadLice.github.io/launch-countdown-timer
+# Live demo: https://BadLice.github.io/launch-countdown-timer
 
 # Frontend Mentor - Launch countdown timer
 
