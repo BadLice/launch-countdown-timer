@@ -2,27 +2,18 @@ import FlipCounter from 'flip.counter';
 import useTime, { TimeActionKind } from 'hooks/useTime';
 import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
-
-const Container = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 3%;
-	height: 100vh;
-	margin-top: -1.9%;
-`;
+import ContainerRow from 'styled/container.row';
 
 const Flipper = styled(FlipCounter)`
-	& > *,
-	& > * > * {
+	& > div,
+	& > div > div {
 		background-color: hsl(236, 21%, 26%);
 		color: hsl(345, 95%, 68%);
 	}
 `;
 
 function Timer() {
-	let size = 70;
+	let size = 60;
 	const [time, dispatch] = useTime();
 	const [timerInterval, setTimerInterval] = useState<NodeJS.Timer | null>(null);
 
@@ -47,12 +38,12 @@ function Timer() {
 	}, [timerInterval, updateTimer]);
 
 	return (
-		<Container>
-			<Flipper value={time.days} size={size} />
-			<Flipper value={time.hours} size={size} />
-			<Flipper value={time.minutes} size={size} />
-			<Flipper value={time.seconds} size={size} />
-		</Container>
+		<ContainerRow>
+			<Flipper value={time.days} size={size} label='days' />
+			<Flipper value={time.hours} size={size} label='hours' />
+			<Flipper value={time.minutes} size={size} label='minutes' />
+			<Flipper value={time.seconds} size={size} label='seconds' />
+		</ContainerRow>
 	);
 }
 
