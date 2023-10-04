@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Social from 'social';
+import styled, { createGlobalStyle } from 'styled-components';
+import Timer from 'timer';
+import Title from 'title';
+
+const GlobalStyles = createGlobalStyle`
+	* {
+		box-sizing: border-box;
+		font-family: 'Red Hat Text', sans-serif;
+	}
+
+	html, body {
+		height: 100%;
+		width: 100%;
+		margin: 0px;
+		background-color:  hsl(234, 17%, 12%);
+	}
+	
+	body {
+		background: url('images/bg-stars.svg'),url('images/pattern-hills.svg')  bottom no-repeat;
+		  background-size: 100%;
+
+	}
+`;
+
+const ContainerColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	gap: 3%;
+	height: 100vh;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<GlobalStyles />
+			<ContainerColumn>
+				<Title />
+				<Timer />
+				<Social />
+			</ContainerColumn>
+		</>
+	);
 }
 
 export default App;
